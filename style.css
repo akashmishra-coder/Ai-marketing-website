@@ -1,0 +1,285 @@
+        :root {
+            --primary-color: #000000;
+            --secondary-color: #ffffff;
+            --accent-color: #00c3ff;
+            --gradiant-color: linear-gradient(90deg, rgb(244, 100, 220), #3c04f5, #00c3ff);
+        }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: var(--primary-color);
+            color: var(--secondary-color);
+        }
+        header {
+            width: 80vw;
+            height: 100px;
+            margin: auto;
+            display: grid;
+            /* background: var(--gradiant-color); */
+            grid-template-columns: 1fr 1fr;
+            box-sizing: border-box;
+        }
+        header div:nth-child(1) {
+            display: flex;
+            align-items: center;
+        }
+        header div:nth-child(1) ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+            margin-left: 10px;
+        }
+        header div:nth-child(1) ul li {
+            font-size: medium;
+            cursor: pointer;
+        }
+        header div:nth-child(1) ul li:hover {
+             transition: color 0.2s ease;
+            color: var(--accent-color);
+        }
+        header div:nth-child(2) {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        header div:nth-child(2) input {
+            margin-right: 20px;
+            background: #5251515f;
+            padding: 10px 20px;
+            border-radius: 10px;
+            border: 1px solid rgba(255, 255, 255, 0.148);
+            color: var(--secondary-color);
+        }
+        header div:nth-child(2) input::placeholder {
+            color: var(--secondary-color);
+        }
+        header div:nth-child(2) a {
+            margin-right: 20px;
+            text-decoration: none;
+            color: var(--secondary-color);
+            font-weight: bold;
+        }
+        header div:nth-child(2) a:hover {
+            transition: color 0.2s ease;
+            color: var(--accent-color);
+        }
+        header div:nth-child(2) button {
+            margin-right: 20px;
+            padding: 8px 16px;
+            border-radius: 10px;
+            border: 1px solid var(--secondary-color);
+            background: var(--primary-color);
+            color: var(--secondary-color);
+            cursor: pointer;
+        }
+        header div:nth-child(2) button:hover {
+            transform: matrix(1.1, 0, 0, 1.1, 0, 0);
+            transition: transform 0.3s ease;
+            border: rgb(0, 64, 255) 1px solid;
+        }
+        header img {
+            width: 80px;
+        }
+        
+        .section-1 {
+            width: 80vw;
+            height: 60vh;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+            margin:  auto;            
+            margin-top: 50px;
+            gap: 20px;
+            /* border: 1px solid var(--secondary-color); */
+        }
+        .section-1 div{
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .section-1 .div1 h2 {
+            text-align: start;
+            font-size: 48px;
+            margin: 0;
+        }
+        .section-1 .div1 h2:nth-child(1){
+           background: var(--gradiant-color);
+           -webkit-background-clip: text;
+           color: transparent;
+           background-clip: text;
+        }
+        .section-1 .div1 p {
+            padding-bottom: 40px;
+            border-bottom: 1px solid red;
+            font-size: 18px;
+            width: 70%;
+        }
+        .anchor-button {
+            width: 120px;
+            text-align: center;
+            padding: 10px 20px;
+            margin-top: 20px;
+            text-decoration: none;
+            color: var(--secondary-color);
+            border: 1px solid var(--secondary-color);
+            border-radius: 20px;
+            background: var(--primary-color);
+            cursor: pointer;
+        }
+        .anchor-button:hover {
+            transform: matrix(1.1, 0, 0, 1.1, 0, 0);
+            transition: transform 0.3s ease;
+            border: rgb(0, 64, 255) 1px solid;
+        }
+        .anchor-button::after {
+            content: '';
+            background: url(Image/right-arrow.png);
+            width: 16px;
+            height: 16px;
+            display: inline-block;
+            margin-left: 10px;
+            vertical-align: middle;
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+        .anchor-button::after:hover {
+            transform: translate(50px);
+            transition: transform 0.3s ease;
+        }
+        .section-1 .div2 {
+            align-items: center;
+        }
+        .section-1 .div2 img {
+            width: 400px;
+        }
+
+        .section-2 {
+            width: 80vw;
+            margin: auto;
+            margin-top: 50px;
+            margin-bottom: 80px;
+            /* border: 1px solid var(--secondary-color); */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 30px;
+            box-sizing: border-box;
+        }
+        .section-2 div {
+            width: 100%;
+            padding: 0 10px;
+            overflow: hidden;
+        }
+        .section-2 div img {
+            animation: scroll-left 15s linear alternate-reverse infinite;
+            width: 100%;
+        }
+        .section-2 div .img2 {
+
+            animation: scroll-right 15s linear alternate-reverse infinite;
+            width: 100%;
+        }
+
+        @keyframes scroll-left {
+        0% { transform: translateX(50%); }
+        100% { transform: translateX(-50%); }
+        }
+
+        @keyframes scroll-right {
+        0% { transform: translateX(-50%); }
+        100% { transform: translateX(50%); }
+        }
+        .card-section-1 {
+             width: 80vw;
+            height: auto;
+            display: grid;
+            padding: 50px 0;
+            grid-template-columns: 1fr 2fr;
+            align-items: center;
+            margin:  auto;            
+            margin-top: 50px;
+            border-radius: 20px;
+            background: var(--gradiant-color);
+            /* gap: 20px; */
+            box-sizing: border-box;
+        }
+        .card-section-1 div:nth-child(1) {
+            width: 100%;
+            display: flex;
+           justify-content: center;
+           align-items: center;
+           }
+           
+        .card-section-1 div:nth-child(1) img{
+            border: 2px solid #03A9F4;
+            border-radius: 20px;
+            width: 250px;
+        }
+        .card-section-1 div:nth-child(2) h3{
+            font-family: 'Poppins', sans-serif;
+            width: 80%;
+            text-align: start;
+            font-size: medium;
+            line-height: 1.5;
+            font-weight: 400;
+            margin: 0;
+            margin-top: 5px;
+            margin-bottom: 20px;
+        }
+        .card-section-1 div:nth-child(2) span {
+            
+            margin-top: 10px;
+            font-size: larger;
+
+        }
+        .card-section-2 {
+            width: 80vw;
+            height: auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+            margin:  auto;            
+            margin-top: 50px;
+            border-radius: 20px;
+            background: var(--gradiant-color);
+            gap: 20px;
+        }
+        .card-section-2 div:nth-child(1) {
+            display: flex;
+           justify-content: center;
+        }
+        .card-section-2 img {
+            width: 350px;
+        }
+        .card-section-2 div:nth-child(2) h2{
+            text-align: start;
+            font-size: 48px;
+            margin: 0;
+        }
+        .card-section-2 div:nth-child(2) div {
+            margin-top: 20px;
+        }
+        .card-section-2 div:nth-child(2) div input{
+            background: rgb(255 255 255 / 8%);
+            filter: blur(50);
+            border: 2px solid rgba(15, 171, 210, 0.437);
+            color: var(--secondary-color);
+            padding: 10px 20px;
+            padding-right: 70px;
+            border-radius: 30px;
+            margin-right: 20px;
+        }
+        .card-section-2 div:nth-child(2) div input::placeholder {
+            color: var(--secondary-color);
+        }
+        footer hr {
+            border: 1px solid var(--secondary-color); 
+            width: 80vw; 
+            margin: auto; 
+            margin-top: 50px;
+        }
+        footer p {
+            text-align: center; 
+            padding: 20px 0;
+        }
