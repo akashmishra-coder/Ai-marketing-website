@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Netflix</title>
+    <title>sign-in page</title>
     <style>
       * {
         margin: 0;
@@ -15,7 +15,7 @@
       .background {
         height: auto;
         width: 100vw;
-        background: url("image/bg-signIn.png") no-repeat center center/cover;
+        /* background: url("image/bg-signIn.png") no-repeat center center/cover; */
       }
       .top-bar {
         padding: 30px 20px;
@@ -178,10 +178,17 @@
           gap: 24px;
         }
       }
+      .background #signIn{
+        height: 120vh;
+        width: 100vw;
+        position: absolute;
+        z-index: -1;
+      }
     </style>
   </head>
   <body>
     <div class="background">
+      <img src="Image/bg-signIn.png" alt="" id="signIn">
       <nav class="top-bar">
         <img src="Image/logo.png" width="150" alt="logo" />
       </nav>
