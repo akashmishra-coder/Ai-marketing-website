@@ -4,6 +4,25 @@ let title = document.getElementById('title');
 let firstname = document.getElementById('firstname');
 let lastname = document.getElementById('lastname');
 const pictur = document.getElementById('card-img');
+const bulb = document.getElementById('light-bulb');
+const logo = document.getElementById('logo');
+
+let color = "white";
+bulb.addEventListener("click", ()=>{
+    if(color === "white") {
+        bulb.style.filter = 'invert(0)' 
+        logo.style.filter = 'invert(1)' 
+        document.body.style.background = "white"
+        document.body.style.color = "black"
+        color = "black";
+    }else{
+        bulb.style.filter = 'invert(1)'
+        logo.style.filter = 'invert(0)' 
+        document.body.style.background = "black"
+        document.body.style.color = "white"
+        color = "white";
+    }
+})
 
 async function userdata(){
     let data = await url;
