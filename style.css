@@ -18,11 +18,18 @@ body {
 }
 header {
   width: 80vw;
-  height: 100px;
+  height: 80px;
   margin: auto;
   display: grid;
   grid-template-columns: 1fr 1fr;
   box-sizing: border-box;
+  position: sticky;
+  top: 0;
+  background: rgba(0, 0, 0, 0.01);
+  -webkit-backdrop-filter: blur(5px); /* For Safari */
+  backdrop-filter: blur(5px);
+  z-index: 1;
+
 }
 header div:nth-child(1) {
   display: flex;
@@ -53,6 +60,7 @@ header div:nth-child(2) input {
   padding: 10px 20px;
   border-radius: 10px;
   border: 1px solid rgba(255, 255, 255, 0.148);
+  cursor: pointer;
 }
 header div:nth-child(2) input::placeholder {
   color: var(--secondary-color);
@@ -61,10 +69,11 @@ header div:nth-child(2) a {
   margin-right: 20px;
   text-decoration: none;
   font-weight: bold;
+  color: var(--secondary-color);
 }
 header div:nth-child(2) a:hover {
   transition: color 0.2s ease;
-  color: var(--accent-color);
+  color: blue;
 }
 header div:nth-child(2) button {
   margin-right: 20px;

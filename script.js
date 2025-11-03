@@ -6,6 +6,8 @@ let lastname = document.getElementById('lastname');
 const pictur = document.getElementById('card-img');
 const bulb = document.getElementById('light-bulb');
 const logo = document.getElementById('logo');
+const anchor = document.querySelector('.anchor');
+const child = document.querySelector('.child2');
 
 let color = "white";
 bulb.addEventListener("click", ()=>{
@@ -14,12 +16,16 @@ bulb.addEventListener("click", ()=>{
         logo.style.filter = 'invert(1)' 
         document.body.style.background = "white"
         document.body.style.color = "black"
+        anchor.style.color = "black"
+        child.style.background = "rgba(255, 255, 255, 0.1)"
         color = "black";
     }else{
         bulb.style.filter = 'invert(1)'
         logo.style.filter = 'invert(0)' 
         document.body.style.background = "black"
         document.body.style.color = "white"
+        anchor.style.color = "white"
+        child.style.background = "rgba(0, 0, 0, 0.1)"
         color = "white";
     }
 })
