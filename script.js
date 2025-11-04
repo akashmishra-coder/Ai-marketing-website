@@ -8,6 +8,7 @@ const bulb = document.getElementById('light-bulb');
 const logo = document.getElementById('logo');
 const anchor = document.querySelector('.anchor');
 const child = document.querySelector('.child2');
+const ul = document.querySelector('#ul');
 
 let color = "white";
 bulb.addEventListener("click", ()=>{
@@ -18,6 +19,7 @@ bulb.addEventListener("click", ()=>{
         document.body.style.color = "black"
         anchor.style.color = "black"
         child.style.background = "rgba(255, 255, 255, 0.1)"
+        ul.style.background = "linear-gradient(rgb(255, 255, 255),rgb(218, 218, 218))"
         color = "black";
     }else{
         bulb.style.filter = 'invert(1)'
@@ -26,6 +28,7 @@ bulb.addEventListener("click", ()=>{
         document.body.style.color = "white"
         anchor.style.color = "white"
         child.style.background = "rgba(0, 0, 0, 0.1)"
+         ul.style.background = "linear-gradient(black,rgb(30, 29, 29))"
         color = "white";
     }
 })
